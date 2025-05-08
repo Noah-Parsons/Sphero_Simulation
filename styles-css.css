@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow: hidden;
+}
+
+#simulation-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#canvas-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+#controls-panel {
+    width: 350px;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.4rem;
+}
+
+h3 {
+    margin: 15px 0 10px;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.control-group {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.control {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.control label {
+    display: inline-block;
+    width: 120px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.control input[type="range"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.control span {
+    width: 50px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 10px 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#reset-btn {
+    background-color: #95a5a6;
+}
+
+#reset-btn:hover {
+    background-color: #7f8c8d;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.data-panel {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+.data-row span:first-child {
+    font-weight: bold;
+}
+
+#status-message {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+@media (max-width: 900px) {
+    #simulation-container {
+        flex-direction: column;
+    }
+    
+    #controls-panel {
+        width: 100%;
+        max-height: 40vh;
+    }
+}
